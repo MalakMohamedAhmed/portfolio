@@ -82,7 +82,7 @@ export default function Experience() {
                         ))}
                       </ul>
                     ) : (
-                      <p className="exp-acc-empty">Details coming soon.</p>
+                      <p className="exp-acc-empty"></p>
                     )}
                   </div>
                 )}
