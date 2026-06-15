@@ -229,8 +229,8 @@ export const experience = [
     duration: "Apr 2026 – Present",
     location: "Al Manṣūrah, Egypt · Hybrid",
     bullets: [
-      "•Collaborate closely with a mentor and team leader to design and implement real-world AI solutions aligned with business objectives.",
-      "•Spearhead the independent execution of an end-to-end AI project, managing the full lifecycle from initial concept to a fully functional MVP, using advanced AI concepts and algorithms.",
+      "Collaborate closely with a mentor and team leader to design and implement real-world AI solutions aligned with business objectives.",
+      "Spearhead the independent execution of an end-to-end AI project, managing the full lifecycle from initial concept to a fully functional MVP, using advanced AI concepts and algorithms.",
     ],
     image: "/images/experience/seg.jpg",
   },
