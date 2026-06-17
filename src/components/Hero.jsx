@@ -11,11 +11,6 @@ export default function Hero({ scrollTo }) {
         <p>& AI Engineer</p>
       </div>
 
-      {/* Corner TR */}
-      <div className="hero-corner hero-corner--tr">
-        <ArrowDown size={14} style={{ transform: 'rotate(-90deg)', color: 'var(--text-muted)' }} />
-      </div>
-
       {/* Name above PORTFOLIO */}
       <div className="hero-name-above">
         <p>Malak Abdelkareem</p>
@@ -122,12 +117,8 @@ export default function Hero({ scrollTo }) {
           transform: translateY(-50%);
         }
         .hero-bg-word {
-          font-family: 'Playfair Display', serif;
-          font-size: clamp(100px, 22vw, 270px);
-          font-weight: 700;
-          line-height: 1;
-          letter-spacing: -4px;
-          color: var(--text-primary);
+          font-size: clamp(90px, 16vw, 250px);  /* was clamp(100px, 22vw, 270px) */
+          letter-spacing: -2px;
         }
         .hero-bg-word--outline {
           color: transparent;
