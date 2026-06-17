@@ -112,13 +112,14 @@ export default function Contact() {
 
       <style>{`
         .contact-section {
-          background: var(--bg-secondary);
+          background: #060a10;
+          padding: 140px 0;
         }
         .contact-inner {
           display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 80px;
-          align-items: center;
+          grid-template-columns: 0.8fr 1.2fr;
+          gap: 100px;
+          align-items: start;
         }
         .contact-open-wrap {
           margin-bottom: 40px;

@@ -3,194 +3,215 @@ import { Github, Linkedin, Mail, ExternalLink, ArrowDown } from 'lucide-react'
 
 export default function Hero({ scrollTo }) {
   return (
-    <section id="hero" className="snap-section hero-section">
-      <div className="grid-bg" />
-      <div className="glow glow-1" />
-      <div className="glow glow-2" />
+    <section id="hero" className="hero-snap hero-section">
 
-      <div className="section-inner hero-inner">
-        <div className="hero-left">
-          <span className="eyebrow">👋 Welcome to my portfolio</span>
-          <h1 className="display-title">
-            Malak<br />
-            <span>Abdelkareem</span>
-          </h1>
-          <p className="hero-role">Junior Data Scientist & AI Engineer</p>
-          <p className="lead-text" style={{ marginTop: 24, marginBottom: 40 }}>
-            {personalInfo.bio}
-          </p>
-          <div className="hero-actions">
-            <button className="btn btn-primary" onClick={() => scrollTo('projects')}>
-              View My Work
-            </button>
-            <button className="btn btn-outline" onClick={() => scrollTo('experience')}>
-              My Journey
-            </button>
-          </div>
-          <div className="hero-links">
-            <a href={personalInfo.linkedin} target="_blank" rel="noreferrer" className="hero-icon-link" title="LinkedIn">
-              <Linkedin size={18} />
-            </a>
-            <a href={personalInfo.github} target="_blank" rel="noreferrer" className="hero-icon-link" title="GitHub">
-              <Github size={18} />
-            </a>
-            <a href={personalInfo.kaggle} target="_blank" rel="noreferrer" className="hero-icon-link" title="Kaggle">
-              <ExternalLink size={18} />
-            </a>
-            <a href={`mailto:${personalInfo.email}`} className="hero-icon-link" title="Email">
-              <Mail size={18} />
-            </a>
-          </div>
-        </div>
-
-        <div className="hero-right">
-          <div className="hero-photo-wrap">
-            <div className="hero-photo-ring">
-              <div className="hero-photo">
-                {personalInfo.photo ? (
-                  <img src={personalInfo.photo} alt={personalInfo.name} />
-                ) : (
-                  <div className="img-placeholder">Your Photo</div>
-                )}
-              </div>
-            </div>
-            <div className="hero-stat hero-stat--1">
-              <p className="hero-stat-num">3.89</p>
-              <p className="hero-stat-label">GPA / 4.0</p>
-            </div>
-            <div className="hero-stat hero-stat--2">
-              <p className="hero-stat-num">15+</p>
-              <p className="hero-stat-label">Projects Built</p>
-            </div>
-            <div className="hero-stat hero-stat--3">
-              <p className="hero-stat-num">2+</p>
-              <p className="hero-stat-label">Years Experience</p>
-            </div>
-          </div>
-        </div>
+      {/* Corner TL */}
+      <div className="hero-corner hero-corner--tl">
+        <p>Junior Data Scientist</p>
+        <p>& AI Engineer</p>
       </div>
 
+      {/* Corner TR */}
+      <div className="hero-corner hero-corner--tr">
+        <ArrowDown size={14} style={{ transform: 'rotate(-90deg)', color: 'var(--text-muted)' }} />
+      </div>
+
+      {/* Name above PORTFOLIO */}
+      <div className="hero-name-above">
+        <p>Malak Abdelkareem</p>
+      </div>
+
+      {/* BIG TEXT BEHIND */}
+      <div className="hero-bg-text">
+        <span className="hero-bg-word">PORT</span>
+        <span className="hero-bg-word hero-bg-word--outline">FOLIO</span>
+      </div>
+
+      {/* Photo on top of text */}
+      <div className="hero-photo-wrap">
+        <img src="/images/profile.png" alt="Malak Abdelkareem" />
+      </div>
+
+      {/* Links row */}
+      <div className="hero-links-row">
+        <a href={personalInfo.linkedin} target="_blank" rel="noreferrer" className="hero-link">
+          <Linkedin size={15} />
+        </a>
+        <span className="hero-link-dot" />
+        <a href={personalInfo.github} target="_blank" rel="noreferrer" className="hero-link">
+          <Github size={15} />
+        </a>
+        <span className="hero-link-dot" />
+        <a href={personalInfo.kaggle} target="_blank" rel="noreferrer" className="hero-link">
+          <ExternalLink size={15} />
+        </a>
+        <span className="hero-link-dot" />
+        <a href={`mailto:${personalInfo.email}`} className="hero-link">
+          <Mail size={15} />
+        </a>
+      </div>
+
+      {/* Scroll */}
       <button className="hero-scroll-btn" onClick={() => scrollTo('experience')}>
-        <ArrowDown size={18} />
+        <ArrowDown size={14} />
       </button>
 
       <style>{`
         .hero-section {
-          background: var(--bg-primary);
-        }
-        .hero-inner {
-          display: grid;
-          grid-template-columns: 1.1fr 0.9fr;
-          gap: 80px;
-          align-items: center;
-        }
-        .hero-role {
-          font-size: clamp(16px, 2vw, 20px);
-          font-weight: 500;
-          color: var(--accent);
-          font-family: 'Inter', sans-serif;
-          letter-spacing: 0.3px;
-        }
-        .hero-actions {
-          display: flex;
-          gap: 12px;
-          margin-bottom: 36px;
-          flex-wrap: wrap;
-        }
-        .hero-links {
-          display: flex;
-          gap: 10px;
-        }
-        .hero-icon-link {
-          width: 40px; height: 40px;
-          border-radius: 50%;
-          background: var(--bg-card);
-          border: 1px solid var(--border);
-          display: flex; align-items: center; justify-content: center;
-          color: var(--text-muted);
-          transition: var(--transition);
-        }
-        .hero-icon-link:hover {
-          color: var(--accent);
-          border-color: var(--accent);
-          transform: translateY(-3px);
-        }
-        .hero-photo-wrap {
           position: relative;
+          background: #080808;
           display: flex;
-          justify-content: center;
           align-items: center;
-          padding: 40px;
-        }
-        .hero-photo-ring {
-          width: 340px; height: 340px;
-          border-radius: 50%;
-          padding: 4px;
-          background: linear-gradient(135deg, var(--accent), transparent);
-          box-shadow: 0 0 80px rgba(126,184,247,0.2);
-        }
-        .hero-photo {
-          width: 100%; height: 100%;
-          border-radius: 50%;
+          justify-content: center;
           overflow: hidden;
-          background: var(--bg-card);
         }
-        .hero-photo img { width: 100%; height: 100%; object-fit: cover; }
-        .hero-stat {
+
+        /* CORNERS */
+        .hero-corner {
           position: absolute;
-          background: rgba(21, 29, 53, 0.9);
-          backdrop-filter: blur(12px);
-          border: 1px solid var(--border);
-          border-radius: var(--radius);
-          padding: 14px 20px;
-          text-align: center;
-          box-shadow: var(--shadow-hover);
+          z-index: 10;
+          display: flex;
+          flex-direction: column;
+          gap: 3px;
         }
-        .hero-stat--1 { top: 20px; left: 0; }
-        .hero-stat--2 { bottom: 20px; right: 0; }
-        .hero-stat--3 { bottom: 20px; left: 0; }
-        .hero-stat-num {
-          font-size: 24px;
-          font-weight: 800;
-          color: var(--accent);
-          font-family: 'Playfair Display', serif;
-          line-height: 1;
-        }
-        .hero-stat-label {
-          font-size: 11px;
-          color: var(--text-muted);
-          margin-top: 4px;
+        .hero-corner p {
+          font-family: 'Inter', sans-serif;
+          font-size: 13px;
           font-weight: 500;
+          color: var(--text-secondary);
+          letter-spacing: 1px;
+          text-transform: uppercase;
         }
-        .hero-scroll-btn {
+        .hero-corner--tl { top: 36px; left: 48px; }
+        .hero-corner--tr {
+          top: 36px; right: 48px;
+          flex-direction: row;
+          align-items: center;
+        }
+
+        /* NAME ABOVE */
+        .hero-name-above {
           position: absolute;
-          bottom: 32px;
+          z-index: 10;
+          top: calc(50% - 170px);
           left: 50%;
           transform: translateX(-50%);
-          width: 44px; height: 44px;
+          white-space: nowrap;
+        }
+        .hero-name-above p {
+          font-family: 'Playfair Display', serif;
+          font-size: 22px;
+          font-weight: 400;
+          color: var(--text-secondary);
+          letter-spacing: 8px;
+          text-transform: uppercase;
+        }
+
+        /* BIG TEXT */
+        .hero-bg-text {
+          position: absolute;
+          z-index: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          gap: 0;
+          pointer-events: none;
+          user-select: none;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        .hero-bg-word {
+          font-family: 'Playfair Display', serif;
+          font-size: clamp(120px, 22vw, 280px);
+          font-weight: 700;
+          line-height: 1;
+          letter-spacing: -4px;
+          color: var(--text-primary);
+        }
+        .hero-bg-word--outline {
+          color: transparent;
+          -webkit-text-stroke: 1.5px rgba(232,238,248,0.15);
+        }
+
+        /* PHOTO */
+        .hero-photo-wrap {
+          position: relative;
+          z-index: 2;
+          height: 100vh;
+          display: flex;
+          align-items: flex-end;
+          justify-content: center;
+        }
+        .hero-photo-wrap img {
+          height: 100%;
+          width: auto;
+          object-fit: cover;
+          object-position: center top;
+          display: block;
+          filter: contrast(1.05);
+        }
+
+        /* LINKS ROW */
+        .hero-links-row {
+          position: absolute;
+          bottom: 36px;
+          left: 48px;
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          z-index: 10;
+        }
+        .hero-link {
+          color: var(--text-muted);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: var(--transition);
+        }
+        .hero-link:hover {
+          color: var(--accent-bright);
+          transform: translateY(-2px);
+        }
+        .hero-link-dot {
+          width: 3px;
+          height: 3px;
           border-radius: 50%;
-          background: var(--bg-card);
+          background: var(--text-muted);
+          opacity: 0.4;
+        }
+
+        /* SCROLL */
+        .hero-scroll-btn {
+          position: absolute;
+          bottom: 36px;
+          right: 48px;
+          width: 36px; height: 36px;
+          border-radius: 50%;
           border: 1px solid var(--border);
-          color: var(--accent);
+          background: none;
+          color: var(--text-muted);
           display: flex; align-items: center; justify-content: center;
           cursor: pointer;
           transition: var(--transition);
-          animation: bounce 2s ease-in-out infinite;
+          z-index: 10;
+          animation: arrowBounce 2s ease-in-out infinite;
         }
         .hero-scroll-btn:hover {
-          background: var(--accent);
-          color: var(--bg-primary);
           border-color: var(--accent);
+          color: var(--accent-bright);
         }
-        @keyframes bounce {
-          0%, 100% { transform: translateX(-50%) translateY(0); }
-          50% { transform: translateX(-50%) translateY(8px); }
+        @keyframes arrowBounce {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(5px); }
         }
-        @media (max-width: 900px) {
-          .hero-inner { grid-template-columns: 1fr; gap: 40px; text-align: center; }
-          .hero-right { display: none; }
-          .hero-actions, .hero-links { justify-content: center; }
-          .lead-text { margin: 24px auto 40px; }
+
+        @media (max-width: 768px) {
+          .hero-bg-word { font-size: clamp(64px, 22vw, 120px); letter-spacing: -2px; }
+          .hero-photo-wrap { height: 65vh; }
+          .hero-corner--tr { display: none; }
+          .hero-corner--tl { left: 24px; top: 24px; }
+          .hero-scroll-btn { right: 24px; bottom: 24px; }
         }
       `}</style>
     </section>

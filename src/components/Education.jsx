@@ -82,13 +82,13 @@ export default function Education() {
 
       <style>{`
         .edu-section {
-          background: var(--bg-primary);
-          overflow-y: auto;
+          background: #0a0f1e;
+          padding: 140px 0;
         }
         .edu-inner {
           display: grid;
           grid-template-columns: 0.8fr 1.2fr;
-          gap: 64px;
+          gap: 100px;
           align-items: start;
         }
         .edu-left {
@@ -150,8 +150,8 @@ export default function Education() {
           border-bottom: 1px solid var(--border);
         }
         .edu-courses {
-          display: flex; flex-wrap: wrap; gap: 7px;
-        }
+        display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 8px;
+      }
         .edu-course-tag {
           display: inline-flex; align-items: center; gap: 6px;
           padding: 5px 12px; border-radius: 100px;

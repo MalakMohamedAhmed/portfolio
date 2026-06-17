@@ -250,6 +250,73 @@ export const experience = [
     image: "/images/experience/eyouth.jpg",
   },
   {
+    role: "AI & Freelancing Skills Trainee",
+    company: "DotPy",
+    type: "Seasonal",
+    duration: "Sep 2025 – Apr 2026 · 8 mos",
+    location: "Cairo, Egypt · Hybrid",
+    image: "/images/experience/dotpy1.jpg",
+    bullets: [],
+    phases: [
+      {
+        name: "AI & Data Science Trainee",
+        duration: "Sep 2025 – Mar 2026 · 7 mos",
+        images: [
+          "/images/experience/dotpy1.jpg",
+          "/images/experience/dotpy2.jpg",
+          "/images/experience/dotpy3.jpg",
+        ],
+        bullets: [
+          "Trained in AI and Data Science fundamentals, covering machine learning, deep learning, data analysis, and model deployment.",
+        ],
+      },
+      {
+        name: "Freelancing & Professional Skills Trainee",
+        duration: "Mar 2026 – Apr 2026 · 2 mos",
+        images: [],
+        bullets: [
+          "Covered career path planning, freelancing strategies, and professional development skills.",
+        ],
+      },
+    ],
+  },
+  {
+    role: "A2SV | Africa to Silicon Valley",
+    company: "A2SV | Africa to Silicon Valley",
+    type: "Seasonal",
+    duration: "Jan 2025 – Apr 2026 · 1 yr 4 mos",
+    location: "Palo Alto, CA · Remote",
+    image: "/images/experience/a2sv.jpg",
+    bullets: [],
+    phases: [
+      {
+        name: "Flutter Mobile Developer — Project Phase",
+        duration: "Feb 2026 – Apr 2026",
+        bullets: [
+          "Built AMONA — a cross-platform Flutter app serving as a tourist guide for Africa, recommending full programs to new visitors and acting as an online travel memory journal.",
+        ],
+        image: "/images/experience/a2sv.jpg",
+      },
+      {
+        name: "Flutter Mobile Developing Track",
+        duration: "Sep 2025 – Feb 2026",
+        bullets: [
+          "Specialized in mobile development using Flutter and Dart.",
+          "Worked on multiple tasks and mini projects covering efficient mobile app development.",
+        ],
+      },
+      {
+        name: "CS Student — Education Phase",
+        duration: "Jan 2025 – Sep 2025",
+        bullets: [
+          "Intensive sessions covering Python basics, problem solving, OOP, Data Structures, and Algorithms.",
+          "Weekly Codeforces contests every Saturday testing new topics.",
+          "Solved problems on LeetCode, Codeforces, GeeksforGeeks, and HackerRank.",
+        ],
+      },
+    ],
+  },
+  {
     role: "AI & Data Science Intern",
     company: "Bibliotheca Alexandrina",
     type: "Internship",
@@ -300,16 +367,7 @@ export const experience = [
     location: "Alexandria, Egypt · On-site",
     bullets: [],
     image: "/images/experience/electricity.jpg",
-  },
-  {
-  role: "AI & Freelancing Skills Trainee",
-  company: "DotPy",
-  type: "Seasonal",
-  duration: "Sep 2026 – Apr 2026 · 9 mos",
-  location: "Cairo, Egypt · Hybrid",
-  bullets: [],
-  images: ["/images/experience/dotpy1.jpg", "/images/experience/dotpy2.jpg", "/images/experience/dotpy3.jpg"]
-},
+  }
 ];
 
 export const skills = {
@@ -364,20 +422,20 @@ export const certifications = [
 
 export const volunteering = [
   {
-    role: "Organizer — Alexandria Employment Fair",
-    organization: "ITIDA",
-    duration: "Feb 2026 · 1 mo",
-    field: "Science and Technology",
-    description: "Organized and coordinated logistics for Alexandria's employment fair under the Information Technology Industry Development Agency.",
-    images: ["/images/volunteering/itida-1.jpg", "/images/volunteering/itida-2.jpg"],
-  },
-  {
     role: "Vice President",
     organization: "Greenish Club Alexandria",
     duration: "Sep 2025 – Present · 10 mos",
     field: "Environment",
     description: "Serving as Vice President of Greenish Club Alexandria, leading environmental initiatives and community engagement activities.",
     images: ["/images/volunteering/greenish-1.jpg"],
+  },
+  {
+    role: "Organizer — SkyStep Event",
+    organization: "GMind",
+    duration: "Aug 2025 · 1 mo",
+    field: "Education",
+    description: "Floater organizer at the SkyStep event powered by GMind at Bibliotheca Alexandrina — focused on empowering children and young people.",
+    images: ["/images/volunteering/gmind-sky-1.jpg", "/images/volunteering/gmind-sky-2.jpg"],
   },
   {
     role: "Content Member",
@@ -393,15 +451,15 @@ export const volunteering = [
     duration: "Sep 2025 · 1 mo",
     field: "Education",
     description: "Guided and facilitated a group of children participating as a mobile development team throughout the robotics contest.",
-    images: ["/images/volunteering/gmind-robot-1.jpg", "/images/volunteering/gmind-robot-2.jpg", "/images/volunteering/gmind-robot-3.jpg"],
+    images: ["/images/volunteering/gmind-robot-1.jpg", "/images/volunteering/gmind-robot-2.jpg"],
   },
   {
-    role: "Organizer — SkyStep Event",
-    organization: "GMind",
-    duration: "Aug 2025 · 1 mo",
-    field: "Education",
-    description: "Floater organizer at the SkyStep event powered by GMind at Bibliotheca Alexandrina — focused on empowering children and young people.",
-    images: ["/images/volunteering/gmind-sky-1.jpg", "/images/volunteering/gmind-sky-2.jpg"],
+    role: "Organizer — Alexandria Employment Fair",
+    organization: "ITIDA",
+    duration: "Feb 2026 · 1 mo",
+    field: "Science and Technology",
+    description: "Organized and coordinated logistics for Alexandria's employment fair under the Information Technology Industry Development Agency.",
+    images: ["/images/volunteering/itida-1.jpg", "/images/volunteering/itida-2.jpg"],
   },
   {
     role: "Head of Academic Sector",

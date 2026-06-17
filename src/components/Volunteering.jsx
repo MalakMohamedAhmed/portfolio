@@ -55,16 +55,17 @@ export default function Volunteering() {
 
       <style>{`
         .vol-section {
-          background: var(--bg-primary);
-          overflow-y: auto;
+          background: #0a0f1e;
+          padding: 140px 0;
         }
         .vol-header {
           margin-bottom: 48px;
         }
         .vol-grid {
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 20px;
+          grid-template-columns: 0.8fr 1.2fr;
+          gap: 100px;
+          align-items: start;
         }
         .vol-card {
           padding: 0;
@@ -103,8 +104,8 @@ export default function Volunteering() {
         .vol-images {
           display: flex;
           gap: 4px;
-          padding: 12px 16px 0;
-          height: 80px;
+          padding: 15px 60px 0;
+          height: 300px;
         }
         .vol-img-wrap {
           flex: 1;

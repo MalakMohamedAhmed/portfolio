@@ -9,46 +9,51 @@ import Certifications from './components/Certifications'
 import Volunteering from './components/Volunteering'
 import Contact from './components/Contact'
 import './App.css'
+import About from './components/About'
 
-const sections = ['hero', 'experience', 'projects', 'skills', 'education', 'certifications', 'volunteering', 'contact']
+const sectionIds = ['hero', 'about', 'experience', 'projects', 'skills', 'education', 'certifications', 'volunteering', 'contact']
 
 export default function App() {
   const [activeSection, setActiveSection] = useState('hero')
-  const containerRef = useRef(null)
 
   useEffect(() => {
-    const container = containerRef.current
-    if (!container) return
-
-    const handleScroll = () => {
-      const children = Array.from(container.children)
-      let closest = null
-      let closestDistance = Infinity
-      children.forEach((child) => {
-        const rect = child.getBoundingClientRect()
-        const distance = Math.abs(rect.top)
-        if (distance < closestDistance) {
-          closestDistance = distance
-          closest = child
-        }
-      })
-      if (closest) setActiveSection(closest.id)
-    }
-
-    container.addEventListener('scroll', handleScroll)
-    return () => container.removeEventListener('scroll', handleScroll)
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActiveSection(entry.target.id)
+        })
+      },
+      { threshold: 0.3 }
+    )
+    sectionIds.forEach(id => {
+      const el = document.getElementById(id)
+      if (el) observer.observe(el)
+    })
+    return () => observer.disconnect()
   }, [])
 
   const scrollTo = (id) => {
-    const el = document.getElementById(id)
-    if (el) el.scrollIntoView({ behavior: 'smooth' })
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
   }
 
   return (
     <div className="app">
       <Navbar activeSection={activeSection} scrollTo={scrollTo} />
-      <div className="snap-container" ref={containerRef}>
-        <Hero scrollTo={scrollTo} />
+
+      <div className="progress-dots">
+        {sectionIds.map(id => (
+          <button
+            key={id}
+            className={`progress-dot ${activeSection === id ? 'progress-dot--active' : ''}`}
+            onClick={() => scrollTo(id)}
+            title={id}
+          />
+        ))}
+      </div>
+
+      <Hero scrollTo={scrollTo} />
+      <main className="main-content">
+        <About />
         <Experience />
         <Projects />
         <Skills />
@@ -56,7 +61,7 @@ export default function App() {
         <Certifications />
         <Volunteering />
         <Contact />
-      </div>
+      </main>
     </div>
   )
 }
