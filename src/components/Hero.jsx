@@ -5,15 +5,10 @@ export default function Hero({ scrollTo }) {
   return (
     <section id="hero" className="hero-snap hero-section">
 
-      {/* Corner TL */}
-      <div className="hero-corner hero-corner--tl">
-        <p>Junior Data Scientist</p>
-        <p>& AI Engineer</p>
-      </div>
-
-      {/* Name above PORTFOLIO */}
+      {/* Name + subtitle above PORTFOLIO */}
       <div className="hero-name-above">
-        <p>Malak Abdelkareem</p>
+        <p className="hero-name-text">Malak Abdelkareem</p>
+        <p className="hero-subtitle">Junior Data Scientist & AI Engineer</p>
       </div>
 
       {/* BIG TEXT BEHIND */}
@@ -61,44 +56,35 @@ export default function Hero({ scrollTo }) {
           overflow: hidden;
         }
 
-        /* CORNERS */
-        .hero-corner {
-          position: absolute;
-          z-index: 10;
-          display: flex;
-          flex-direction: column;
-          gap: 3px;
-        }
-        .hero-corner p {
-          font-family: 'Inter', sans-serif;
-          font-size: 13px;
-          font-weight: 500;
-          color: var(--text-secondary);
-          letter-spacing: 1px;
-          text-transform: uppercase;
-        }
-        .hero-corner--tl { top: 36px; left: 48px; }
-        .hero-corner--tr {
-          top: 36px; right: 48px;
-          flex-direction: row;
-          align-items: center;
-        }
-
-        /* NAME ABOVE */
+        /* NAME + SUBTITLE */
         .hero-name-above {
           position: absolute;
           z-index: 10;
-          top: calc(50% - 170px);
-          left: 50%;
-          transform: translateX(-50%);
+          top: calc(50% - 200px);
+          left: 0;
+          right: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          text-align: center;
           white-space: nowrap;
         }
-        .hero-name-above p {
+        .hero-name-text {
           font-family: 'Playfair Display', serif;
-          font-size: 22px;
+          font-size: 28px;
           font-weight: 400;
           color: var(--text-secondary);
           letter-spacing: 8px;
+          text-transform: uppercase;
+        }
+        .hero-subtitle {
+          font-family: 'Inter', sans-serif;
+          font-size: 30px;
+          font-weight: 500;
+          color: var(--text-secondary);
+          letter-spacing: 3px;
           text-transform: uppercase;
         }
 
@@ -117,8 +103,12 @@ export default function Hero({ scrollTo }) {
           transform: translateY(-50%);
         }
         .hero-bg-word {
-          font-size: clamp(90px, 16vw, 250px);  /* was clamp(100px, 22vw, 270px) */
+          font-family: 'Playfair Display', serif;
+          font-size: clamp(90px, 16vw, 250px);
+          font-weight: 700;
+          line-height: 1;
           letter-spacing: -2px;
+          color: var(--text-primary);
         }
         .hero-bg-word--outline {
           color: transparent;
@@ -200,8 +190,7 @@ export default function Hero({ scrollTo }) {
         @media (max-width: 768px) {
           .hero-bg-word { font-size: clamp(64px, 22vw, 120px); letter-spacing: -2px; }
           .hero-photo-wrap { height: 65vh; }
-          .hero-corner--tr { display: none; }
-          .hero-corner--tl { left: 24px; top: 24px; }
+          .hero-links-row { left: 24px; bottom: 24px; }
           .hero-scroll-btn { right: 24px; bottom: 24px; }
         }
       `}</style>
