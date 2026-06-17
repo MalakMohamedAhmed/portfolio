@@ -123,7 +123,7 @@ export default function Hero({ scrollTo }) {
         }
         .hero-bg-word {
           font-family: 'Playfair Display', serif;
-          font-size: clamp(120px, 22vw, 280px);
+          font-size: clamp(100px, 22vw, 270px);
           font-weight: 700;
           line-height: 1;
           letter-spacing: -4px;
