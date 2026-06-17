@@ -73,7 +73,7 @@ export default function Hero({ scrollTo }) {
         }
         .hero-name-text {
           font-family: 'Playfair Display', serif;
-          font-size: 28px;
+          font-size: 22px;
           font-weight: 400;
           color: var(--text-secondary);
           letter-spacing: 8px;
@@ -81,7 +81,7 @@ export default function Hero({ scrollTo }) {
         }
         .hero-subtitle {
           font-family: 'Inter', sans-serif;
-          font-size: 30px;
+          font-size: 24px;
           font-weight: 500;
           color: var(--text-secondary);
           letter-spacing: 3px;

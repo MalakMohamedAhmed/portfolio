@@ -3,7 +3,7 @@ import { Heart } from 'lucide-react'
 
 export default function Volunteering() {
   return (
-    <section id="volunteering" className="snap-section vol-section">
+    <section id="volunteering" className="section vol-section">
       <div className="grid-bg" />
       <div className="section-inner">
         <div className="vol-header">

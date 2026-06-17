@@ -249,7 +249,7 @@ export default function Projects() {
     `}</style>
   </section>
   )
-
+}
 // ── Shared button row ──────────────────────────────────────────────
 function ProjectButtons({ project: p, size = 'md' }) {
   const pad = size === 'sm' ? '7px 14px' : '9px 18px'
@@ -346,5 +346,4 @@ function ProjectCard({ project: p }) {
         </div>
     </div>
   )
-}
 }

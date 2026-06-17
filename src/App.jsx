@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Experience from './components/Experience'
@@ -23,7 +23,10 @@ export default function App() {
           if (entry.isIntersecting) setActiveSection(entry.target.id)
         })
       },
-      { threshold: 0.3 }
+      {
+        threshold: 0,
+        rootMargin: '-40% 0px -55% 0px',
+      }
     )
     sectionIds.forEach(id => {
       const el = document.getElementById(id)
